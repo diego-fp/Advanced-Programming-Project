@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/rpg_adventure.dir/main.cpp.o  -o rpg_adventure 
