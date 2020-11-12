@@ -3,4 +3,4 @@ project(rpg_adventure)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(rpg_adventure main.cpp)
+add_executable(rpg_adventure main.cpp Player.cpp Player.h InputOutput.cpp InputOutput.h)
