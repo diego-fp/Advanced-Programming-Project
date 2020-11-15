@@ -63,5 +63,6 @@ int main() {
         Player player = CreatePlayer();
         GameLoop(player);
     }
+
     return 0;
 }

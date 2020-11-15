@@ -17,5 +17,3 @@ int InputOutput::WriteState(Player player, std::string filename) {
 std::string InputOutput::ReadState(std::string filename) {}
 
 //InputOutput::InputOutput() {}
-
-
