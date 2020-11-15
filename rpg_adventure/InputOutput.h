@@ -11,8 +11,12 @@ class InputOutput {
 public:
     //InputOutput();
     int WriteState(Player player, std::string filename);
-    std::string ReadState(std::string filename);
-
+    int ReadState(std::string filename);
+    std::string name() const;
+    int hp() const;
+private:
+    std::string name_;
+    int hp_;
 };
 
 

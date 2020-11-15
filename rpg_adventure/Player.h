@@ -8,7 +8,7 @@
 
 class Player {
 public:
-    Player(std::string name);
+    Player(std::string name, int HP);
     int HP();
     std::string name();
     void UpdateHP(int number);
@@ -17,7 +17,7 @@ public:
 
 private:
     std::string name_;
-    int HP_ = 100;
+    int HP_;
 };
 
 #endif //RPG_ADVENTURE_PLAYER_H

@@ -14,6 +14,15 @@ int InputOutput::WriteState(Player player, std::string filename) {
     return 0;
 }
 
-std::string InputOutput::ReadState(std::string filename) {}
+int InputOutput::ReadState(std::string filename) {
+    std::ifstream infile(filename);
+    while (infile >> name_ >> hp_){
+        std::cout <<"loaded: " << name_ << " " << hp_ << std::endl;
+    }
+    return 0;
+}
+
+std::string InputOutput::name() const { return name_;}
+int InputOutput::hp() const {return hp_;}
 
 //InputOutput::InputOutput() {}

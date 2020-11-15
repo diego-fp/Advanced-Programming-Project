@@ -4,13 +4,19 @@
 
 using std::string;
 
-Player CreatePlayer(){
-    std::cout << "select a name: ";
-    string name;
-    std::cin >> name;
-    Player my_player{name};
-    std::cout << name << std::endl;
-    return my_player;
+Player CreatePlayer(std::string name="", int HP=100){
+    if (name.empty()) {
+        std::cout << "select a name: ";
+        std::cin >> name;
+        Player my_player{name, HP};
+        std::cout << name << std::endl;
+        return my_player;
+    }
+    else{
+        Player my_player{name, HP};
+        std::cout << name << std::endl;
+        return my_player;
+    }
 }
 
 
@@ -61,6 +67,13 @@ int main() {
     std::cout << input << std::endl;
     if (input == 1) {
         Player player = CreatePlayer();
+        GameLoop(player);
+    }
+    else if (input == 2){
+        std::cout << "Loading state ..." << std::endl;
+        InputOutput loader;
+        loader.ReadState("save.txt");
+        Player player = CreatePlayer(loader.name(), loader.hp());
         GameLoop(player);
     }
 

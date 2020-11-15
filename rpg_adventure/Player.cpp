@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 
-Player::Player(std::string name): name_{name} {}
+Player::Player(std::string name, int HP): name_{name}, HP_{HP} {}
 int Player::HP() {
         return HP_;
 }
