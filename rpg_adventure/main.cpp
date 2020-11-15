@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Player.h"
+#include "InputOutput.h"
+
 using std::string;
 
 Player CreatePlayer(){
@@ -35,7 +37,8 @@ void GameLoop(Player player){
             player.ShowStats();
         }
         else if (input == 3){
-
+            InputOutput saver;
+            saver.WriteState(player, "save.txt");
         }
         else if (input == 4){
             std::cout << "Bye!" << std::endl;
