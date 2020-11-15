@@ -5,7 +5,7 @@
 #include "InputOutput.h"
 #include <fstream>
 
-int InputOutput::WriteState(Player player, std::string filename) {
+int InputOutput::WriteState(const Player& player, const std::string& filename) {
     std::cout << "Saving Game!" << std::endl;
     std::ofstream outfile(filename); // if we add std::ios_base::in file is not opened
     if (!outfile.is_open()) {return EXIT_FAILURE;}
@@ -14,7 +14,7 @@ int InputOutput::WriteState(Player player, std::string filename) {
     return 0;
 }
 
-int InputOutput::ReadState(std::string filename) {
+int InputOutput::ReadState(const std::string& filename) {
     std::ifstream infile(filename);
     while (infile >> name_ >> hp_){
         std::cout << "loaded: " << name_ << " " << hp_ << std::endl;

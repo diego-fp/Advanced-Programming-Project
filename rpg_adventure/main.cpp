@@ -12,13 +12,12 @@ Player CreatePlayer(std::string name="", int HP=100){
         std::cout << name << std::endl;
         return my_player;
     }
-    else{
+    else {
         Player my_player{name, HP};
         std::cout << name << std::endl;
         return my_player;
     }
 }
-
 
 
 void GameLoop(Player player){
