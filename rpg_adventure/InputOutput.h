@@ -10,8 +10,8 @@
 class InputOutput {
 public:
     //InputOutput();
-    int WriteState(Player player, std::string filename);
-    int ReadState(std::string filename);
+    int WriteState(const Player& player, const std::string& filename);
+    int ReadState(const std::string& filename);
     std::string name() const;
     int hp() const;
 private:
