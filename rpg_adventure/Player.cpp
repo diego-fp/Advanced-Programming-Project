@@ -7,11 +7,11 @@
 #include <iostream>
 
 Player::Player(std::string name, int HP): name_{name}, HP_{HP} {}
-int Player::HP() {
+int Player::HP() const{
         return HP_;
 }
 
-std::string Player::name() {
+std::string Player::name() const{
 return name_;
 }
 
@@ -25,7 +25,7 @@ void Player::Fight(){
     UpdateHP(val);
 }
 
-void Player::ShowStats(){
+void Player::ShowStats() const{
     std::cout << name() <<"'s stats" << std::endl;
     std::cout << "HP: " << HP() << std::endl;
 }

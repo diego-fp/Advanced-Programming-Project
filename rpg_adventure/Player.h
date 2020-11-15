@@ -9,11 +9,11 @@
 class Player {
 public:
     Player(std::string name, int HP);
-    int HP();
-    std::string name();
+    int HP() const;
+    std::string name() const;
     void UpdateHP(int number);
     void Fight();
-    void ShowStats();
+    void ShowStats() const;
 
 private:
     std::string name_;

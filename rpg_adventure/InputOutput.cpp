@@ -17,7 +17,7 @@ int InputOutput::WriteState(Player player, std::string filename) {
 int InputOutput::ReadState(std::string filename) {
     std::ifstream infile(filename);
     while (infile >> name_ >> hp_){
-        std::cout <<"loaded: " << name_ << " " << hp_ << std::endl;
+        std::cout << "loaded: " << name_ << " " << hp_ << std::endl;
     }
     return 0;
 }
